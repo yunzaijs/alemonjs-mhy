@@ -1,6 +1,6 @@
 {
   "name": "alemonjs-mhy",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "mhy-mod",
   "author": "ningmengchongshui",
   "type": "module",
@@ -8,6 +8,17 @@
   "exports": {
     ".": "./lib/index.js",
     "./package": "./package.json"
+  },
+  "scripts": {
+    "app": "node index.js",
+    "dev": "npx lvy app.ts",
+    "view": "npx lvy app.ts --jsxp",
+    "lint": "eslint src --ext .ts,.tsx,.js --max-warnings=0",
+    "lint:fix": "eslint src --ext .ts,.tsx,.js --fix --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "precommit": "lint-staged",
+    "test:expose": "yarn build && node --test test/expose*.test.mjs"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -23,7 +34,6 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@1.22.22",
   "keywords": [
     "alemonjs"
   ],
@@ -35,5 +45,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/xiuxianjs/alemonjs-mhy.git"
-  }
+  },
+  "gitHead": "78509d7f628d169d67b6bdd87ff9cce27cbec9c0"
 }
