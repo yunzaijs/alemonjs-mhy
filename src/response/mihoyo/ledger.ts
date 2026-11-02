@@ -1,3 +1,4 @@
+import { resolveLedgerMonth, formatLedgerMonth } from '@src/model/mihoyo/ledger';
 /**
  * 札记 / 原石统计 / 星琼统计
  * 命令: #札记 / #原石 / #星琼 / #原石6月
@@ -61,14 +62,6 @@ const parseMonth = (text: string): number => {
   return new Date().getMonth() + 1;
 };
 
-const validateMonth = (month: number): boolean => {
-  const now = new Date().getMonth() + 1;
-  // 最近三个月（跨年处理）
-  const valid = [11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].slice(now - 1, now + 2);
-
-  return valid.includes(month);
-};
-
 // ─── 入口 ────────────────────────────────────────────
 
 export default async (e: EventsEnum) => {
@@ -97,7 +90,9 @@ export default async (e: EventsEnum) => {
 
   const month = parseMonth(text);
 
-  if (!validateMonth(month)) {
+  const period = resolveLedgerMonth(month);
+
+  if (!period) {
     const md = Format.createMarkdown();
 
     md.addText('札记仅支持查询最近三个月的数据');
@@ -111,7 +106,7 @@ export default async (e: EventsEnum) => {
   }
 
   // 星铁月份格式为 YYYYMM
-  const queryMonth = game === 'sr' ? `${new Date().getFullYear()}${month < 10 ? '0' : ''}${month}` : String(month);
+  const queryMonth = formatLedgerMonth(period, game);
 
   const result = await queryMihoyoApi({
     userId,

@@ -8,6 +8,7 @@ export const mihoyoKeys = {
   cookieByUser: (userId: string | number) => `${mihoyoKeyPrefix}:cookie:user:${userId}`,
   stokenByUser: (userId: string | number) => `${mihoyoKeyPrefix}:stoken:user:${userId}`,
   uidByUserAndGame: (userId: string | number, game: string) => `${mihoyoKeyPrefix}:uid:user:${userId}:${game}`,
+  authKeyByUser: (userId: string | number) => `${mihoyoKeyPrefix}:authkey:user:${userId}`,
   authKeyByUid: (uid: string | number) => `${mihoyoKeyPrefix}:authkey:uid:${uid}`,
   payLogByUser: (userId: string | number) => `${mihoyoKeyPrefix}:paylog:user:${userId}`,
   queryCache: (game: string, uid: string | number, api: string) => `${mihoyoKeyPrefix}:cache:${game}:${uid}:${api}`,

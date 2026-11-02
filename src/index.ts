@@ -1,6 +1,9 @@
+import { mhyExpose } from './expose';
 import router from './response/router';
 
 // ─── 导出供其他插件使用的 API ────────────────────────
+
+export { mhyExpose } from './expose';
 
 // 类型
 export type { BindCookieResult, StoredCookieData } from '@src/model/mihoyo/account';
@@ -37,7 +40,8 @@ export { fetchGameRoles, fetchUserFullInfo, mysApiFetch } from '@src/model/mihoy
 export default defineChildren({
   register() {
     return {
-      responseRouter: router
+      responseRouter: router,
+      expose: mhyExpose
     };
   },
   onCreated() {
