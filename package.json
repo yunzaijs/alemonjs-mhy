@@ -1,6 +1,6 @@
 {
   "name": "alemonjs-mhy",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "mhy-mod",
   "author": "ningmengchongshui",
   "type": "module",
@@ -46,5 +46,5 @@
     "type": "git",
     "url": "https://github.com/xiuxianjs/alemonjs-mhy.git"
   },
-  "gitHead": "78509d7f628d169d67b6bdd87ff9cce27cbec9c0"
+  "gitHead": "ae230f8009c7f9236e3bc75db90821cf0fc2cf2e"
 }
