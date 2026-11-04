@@ -4,19 +4,6 @@
 
 [README_COMMAND](./README_COMMAND.md)
 
-## 安装方式: npm
-
-```sh
-yarn add alemonjs-mhy -W
-```
-
-- alemon.config.yaml
-
-```yaml
-apps:
-  alemonjs-mhy: true # 启动扩展
-```
-
 ### 导出 API
 
 ```typescript
