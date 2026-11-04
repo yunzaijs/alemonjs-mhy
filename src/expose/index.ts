@@ -55,8 +55,11 @@ function queryAction(description: string, api: string, games: string[], extra: R
   );
 }
 
+const capabilityCard = { displayName: '米游社', entryCommand: '/米游社帮助' };
+
 export const mhyExpose = Expose.create().provide({
   name: 'mhy',
+  ...capabilityCard,
   version: '1.0.0',
   description: '米游社账号、原神/星铁/绝区零查询与签到；操作身份来自当前消息，不返回 Cookie 或 Stoken。',
   actions: {
