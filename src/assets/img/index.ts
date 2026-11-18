@@ -52,6 +52,7 @@ import iconBind from './icon/绑定账号.png';
 import iconStats from './icon/统计.png';
 import iconRecord from './icon/记录.png';
 import iconHelp from './icon/问号.png';
+import iconKeqing from './icon/刻晴.png';
 
 export const UI_ICONS = {
   abyss: iconAbyss,
@@ -72,26 +73,114 @@ export const UI_ICONS = {
   stats: iconStats,
   guide: iconGuide,
   checkin: iconCheckin,
+  keqing: iconKeqing,
   tcg: iconTcg
+} as const;
+
+// ─── 星铁图标 ────────────────────────────────────────
+import srAbyss from './sr/abyss.png';
+import srAccount from './sr/account.png';
+import srActivity from './sr/activity.png';
+import srAvatar from './sr/avatar.png';
+import srDaily from './sr/daily.png';
+import srFiction from './sr/fiction.png';
+import srFriend from './sr/friend.png';
+import srHelp from './sr/help.png';
+import srJade from './sr/jade.png';
+import srLogo from './sr/logo.png';
+import srMail from './sr/mail.png';
+import srNews from './sr/news.png';
+import srNotice from './sr/notice.png';
+import srPower from './sr/power.png';
+import srShop from './sr/shop.png';
+import srUnbind from './sr/unbind.png';
+
+// ─── 角色头像 ────────────────────────────────────────
+import charMarch7 from './character/march7.png';
+import charPaimon from './character/paimon.png';
+import charZzz from './character/zzz.png';
+
+export const CHARACTER_ICONS = {
+  paimon: charPaimon,
+  march7: charMarch7,
+  zzz: charZzz
+} as const;
+
+export const SR_ICONS = {
+  logo: srLogo,
+  power: srPower,
+  avatar: srAvatar,
+  abyss: srAbyss,
+  fiction: srFiction,
+  jade: srJade,
+  daily: srDaily,
+  notice: srNotice,
+  news: srNews,
+  activity: srActivity,
+  account: srAccount,
+  friend: srFriend,
+  unbind: srUnbind,
+  shop: srShop,
+  mail: srMail,
+  help: srHelp
+} as const;
+
+// ─── 绝区零 ──────────────────────────────────────────
+import zzzPower from './zzz/power.png';
+import zzzAgent from './zzz/agent.png';
+import zzzExplore from './zzz/explore.png';
+import zzzBangboo from './zzz/bangboo.png';
+import zzzNotice from './zzz/notice.png';
+import zzzNews from './zzz/news.png';
+import zzzEvent from './zzz/event.png';
+import zzzHelp from './zzz/help.png';
+import zzzBind from './zzz/bind.png';
+import zzzMyid from './zzz/myid.png';
+import zzzUnbind from './zzz/unbind.png';
+import zzzCode from './zzz/code.png';
+import zzzCodeUse from './zzz/codeuse.png';
+
+export const ZZZ_ICONS = {
+  power: zzzPower,
+  agent: zzzAgent,
+  explore: zzzExplore,
+  bangboo: zzzBangboo,
+  notice: zzzNotice,
+  news: zzzNews,
+  event: zzzEvent,
+  help: zzzHelp,
+  bind: zzzBind,
+  myid: zzzMyid,
+  unbind: zzzUnbind,
+  code: zzzCode,
+  codeuse: zzzCodeUse
 } as const;
 
 // ─── 背景与装饰 ──────────────────────────────────────
 import bgWebp from './other/bg.webp';
+import bgGs from './other/bg-gs.webp';
+import bgZzz from './other/bg-zzz.webp';
+import bgSr from './other/bg-sr.webp';
 import bg105 from './other/bg105.png';
 import bg3 from './other/bg3.png';
 import bg4 from './other/bg4.png';
 import bg5 from './other/bg5.png';
 import fill from './other/fill.png';
 import genshinLogo from './other/原神.png';
+import zzzLogo from './other/zzz-logo.png';
 
 export const BG_IMAGES = {
   bg: bgWebp,
+  bgGs,
+  bgSr,
+  bgZzz,
   bg3,
   bg4,
   bg5,
   bg105,
   fill,
-  genshinLogo
+  genshinLogo,
+  zzzLogo
 } as const;
 
 // ─── 世界探索地图 ────────────────────────────────────

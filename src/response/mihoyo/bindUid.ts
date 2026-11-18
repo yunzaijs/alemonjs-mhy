@@ -55,7 +55,7 @@ export default async (e: EventsEnum) => {
 
     md.addText(`请输入正确的${GAME_NAMES[game]}UID`);
     md.addNewline();
-    md.addText('示例: #绑定uid100000001');
+    md.addText(`示例: /${game === 'gs' ? '原神' : game === 'sr' ? '星铁' : '绝区零'}绑定uid 100000001`);
     const format = Format.create();
 
     format.addMarkdown(md);

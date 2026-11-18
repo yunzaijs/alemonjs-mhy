@@ -50,7 +50,7 @@ export default async (e: EventsEnum) => {
   if (lines.length === 0) {
     md.addText('暂无绑定的UID');
     md.addNewline();
-    md.addText('使用 #绑定uid + UID 进行绑定');
+    md.addText('使用 /原神绑定uid 100000001 进行绑定');
   } else {
     md.addText(lines.join('\n'));
     md.addNewline();

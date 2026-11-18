@@ -134,9 +134,9 @@ export default async (e: EventsEnum) => {
 
     md.addText('可用指令:');
     md.addNewline();
-    md.addText('#原神签到 / #星铁签到 / #游戏签到');
+    md.addText('/原神签到 / /星铁签到 / #全部签到');
     md.addNewline();
-    md.addText('#米游社签到 (获取米游币)');
+    md.addText('/米游社签到 (获取米游币)');
     md.addNewline();
     md.addText('#我的stoken / #删除stoken');
   }

@@ -35,7 +35,7 @@ export default async (e: EventsEnum) => {
         '1. 在米游社App中进入客服页面',
         '2. 复制页面链接(包含authkey)',
         '3. 私聊发送该链接',
-        '4. 发送 #充值记录 查看统计',
+        '4. 发送 /米游社充值记录 查看统计',
         '',
         '安卓教程: https://b23.tv/K5qfLad'
       ].join('\n')
@@ -87,7 +87,7 @@ export default async (e: EventsEnum) => {
       }
     }
 
-    sendText('请先私聊发送米游社客服页面链接\n可发送 #充值帮助 查看教程');
+    sendText('请先私聊发送米游社客服页面链接\n可发送 /米游社充值记录帮助 查看教程');
 
     return;
   }
@@ -122,5 +122,5 @@ export default async (e: EventsEnum) => {
     }
   }
 
-  sendText('暂无充值数据，请私聊发送米游社客服页面链接\n可发送 #充值帮助 查看教程');
+  sendText('暂无充值数据，请私聊发送米游社客服页面链接\n可发送 /米游社充值记录帮助 查看教程');
 };

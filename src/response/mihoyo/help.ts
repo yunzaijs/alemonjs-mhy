@@ -10,6 +10,14 @@ export default async (e: EventsEnum) => {
 
   const [message] = useMessage(event);
 
+  const text = e.MessageText ?? '';
+  const game = /米游社|米哈游|mhy|mihoyo/i.test(text)
+    ? 'mhy'
+    : /星铁|星穹铁道|崩铁/.test(text)
+      ? 'sr'
+      : /绝区零|zzz|邦布/i.test(text)
+        ? 'zzz'
+        : 'gs';
   const pageMatch = e.MessageText.match(/(\d+)/);
   let page = pageMatch ? parseInt(pageMatch[1]) : 1;
 
@@ -22,7 +30,7 @@ export default async (e: EventsEnum) => {
   }
 
   const img = await renderComponentIsHtmlToBuffer(MihoyoHelp, {
-    data: { page, totalPages: MHY_TOTAL_PAGES }
+    data: { page, totalPages: MHY_TOTAL_PAGES, game }
   });
 
   if (typeof img === 'boolean') {
